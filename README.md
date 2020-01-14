@@ -1,4 +1,4 @@
-# sqlite_demo
+# tasks app
 
 Flutter sqlite demo app
 
