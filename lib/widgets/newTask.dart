@@ -41,13 +41,14 @@ class _NewTaskDetailsState extends State<NewTaskDetails> {
           FlatButton(
             onPressed: () async {
               Task task = Task(
-                heading: controller1.toString(),
-                context: controller2.toString(),
-                status: true,
+                heading: controller1.text,
+                context: controller2.text,
+                status: false,
               );
               await DBProvider.db.newTask(task);
               setState(() {});
-              print("Added "+controller1.toString()+" and "+controller2.toString());
+              print("Added "+controller1.text+" and "+controller2.text);
+              Navigator.pop(context);
             },
             child: Text("Save"),
           ),

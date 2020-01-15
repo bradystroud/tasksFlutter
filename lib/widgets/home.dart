@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'list.dart';
 import 'coolHeader.dart';
-import '../Database/Database.dart';
+
+import './newTask.dart';
 import '../Database/TaskModel.dart';
-import 'dart:math' as math;
+
 
 class Home extends StatefulWidget {
   @override
@@ -42,9 +43,10 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () async {
-          Task rnd = testTasks[math.Random().nextInt(testTasks.length)];
-          await DBProvider.db.newTask(rnd);
-          setState(() {});
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NewTask()),
+          );
         },
       ),
     );

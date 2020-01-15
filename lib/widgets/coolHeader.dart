@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/widgets/newTask.dart';
+
 
 class CoolHeader extends StatelessWidget {
   @override
@@ -11,10 +11,7 @@ class CoolHeader extends StatelessWidget {
       leading: IconButton(
         icon: Icon(Icons.settings),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => NewTask()),
-          );
+          //TODO: settings page
         },
       ),
       flexibleSpace: FlexibleSpaceBar(
