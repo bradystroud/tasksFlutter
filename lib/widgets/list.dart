@@ -37,6 +37,7 @@ class _TasksViewState extends State<TasksView> {
                       Text(item.context)
                     ],
                   ),
+                  trailing: IconButton(onPressed: () {}, icon: Icon(Icons.info),),
                   leading: Checkbox(
                     onChanged: (bool value) {
                       DBProvider.db.changeStatus(item);
