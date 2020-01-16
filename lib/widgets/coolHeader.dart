@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:tasks/widgets/SettingsPage.dart';
 
 class CoolHeader extends StatelessWidget {
   @override
@@ -11,7 +11,12 @@ class CoolHeader extends StatelessWidget {
       leading: IconButton(
         icon: Icon(Icons.settings),
         onPressed: () {
-          //TODO: settings page
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SettingsPage(),
+            ),
+          );
         },
       ),
       flexibleSpace: FlexibleSpaceBar(
