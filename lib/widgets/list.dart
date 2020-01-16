@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Database/Database.dart';
 import '../Database/TaskModel.dart';
+import './modify.dart';
 
 class TasksView extends StatefulWidget {
   @override
@@ -37,7 +38,17 @@ class _TasksViewState extends State<TasksView> {
                       Text(item.context)
                     ],
                   ),
-                  trailing: IconButton(onPressed: () {}, icon: Icon(Icons.info),),
+                  trailing: IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Modify(item), 
+                        ),
+                      );
+                    },
+                    icon: Icon(Icons.info),
+                  ),
                   leading: Checkbox(
                     onChanged: (bool value) {
                       DBProvider.db.changeStatus(item);
@@ -62,7 +73,8 @@ class _TasksViewState extends State<TasksView> {
             },
           );
         } else {
-          return Center(child: Row(
+          return Center(
+              child: Row(
             children: <Widget>[
               CircularProgressIndicator(),
               Text("No tasks. Tap the + button to make one.")

@@ -61,6 +61,7 @@ class DBProvider {
 
   updateTask(Task newTask) async {
     final db = await database;
+    print('updating id of:'+ newTask.id.toString());
     var res = await db.update("Tasks", newTask.toMap(),
         where: "id = ?", whereArgs: [newTask.id]);
     return res;

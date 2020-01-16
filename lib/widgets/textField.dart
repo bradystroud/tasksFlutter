@@ -6,8 +6,8 @@ class TextFieldWidget extends StatelessWidget {
   int mxLen;
   var controller;
 
-  @override
   TextFieldWidget(this.hint, this.mxLen, this.controller);
+  @override
 
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +19,7 @@ class TextFieldWidget extends StatelessWidget {
           android: (_) => MaterialTextFieldData(
             decoration: InputDecoration(
               labelText: hint,
-              hintStyle: TextStyle(fontSize: 20.0, color: Colors.redAccent),
+              hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey),
               border: new OutlineInputBorder(
                 borderRadius: const BorderRadius.all(
                   const Radius.circular(10.0),
