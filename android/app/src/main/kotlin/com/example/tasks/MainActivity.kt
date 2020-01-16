@@ -1,4 +1,4 @@
-package bradystroud.tasks
+package com.example.tasks
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

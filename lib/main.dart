@@ -10,7 +10,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // data for testing
   
   @override
   Widget build(BuildContext context) {
