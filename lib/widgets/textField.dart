@@ -2,9 +2,9 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  String hint;
-  int mxLen;
-  var controller;
+  final String hint;
+  final int mxLen;
+  final controller;
 
   TextFieldWidget(this.hint, this.mxLen, this.controller);
   @override
