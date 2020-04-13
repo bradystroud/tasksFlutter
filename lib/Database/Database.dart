@@ -102,4 +102,18 @@ class DBProvider {
     final db = await database;
     db.rawDelete("Delete * from Tasks");
   }
+  check0() async {
+    final db = await database;
+    int count =  Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM Tasks'));
+
+    print(count);
+    if (count == 0) {
+      print("0");
+      return "hello";
+    }
+    else {
+      print("1");
+      return "goodbye";
+    }
+  }
 }

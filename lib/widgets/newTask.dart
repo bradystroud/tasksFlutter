@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
+import "FAB's.dart";
 import '../Database/Database.dart';
 import '../Database/TaskModel.dart';
 import './textField.dart';
+import '../globals.dart' as globals;
 
 class NewTask extends StatefulWidget {
   @override
@@ -40,6 +42,7 @@ class _NewTaskDetailsState extends State<NewTaskDetails> {
           TextFieldWidget("Task description", 100, controller2),
           FlatButton(
             onPressed: () async {
+              globals.fab = LazyFab();
               Task task = Task(
                 heading: controller1.text,
                 context: controller2.text,

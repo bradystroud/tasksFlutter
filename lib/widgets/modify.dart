@@ -6,7 +6,7 @@ import '../Database/TaskModel.dart';
 import './textField.dart';
 
 class Modify extends StatefulWidget {
-  Task task;
+  final Task task;
 
   Modify(this.task);
   @override
